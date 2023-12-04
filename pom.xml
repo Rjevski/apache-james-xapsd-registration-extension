@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.rjevski</groupId>
+    <artifactId>x-apple-push-service-imap-extension</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <james.groupId>org.apache.james</james.groupId>
+        <james.baseVersion>3.9.0-SNAPSHOT</james.baseVersion>
+        <james.protocols.groupId>${james.groupId}.protocols</james.protocols.groupId>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>${james.groupId}</groupId>
+            <artifactId>james-server-guice-imap</artifactId>
+            <version>${james.baseVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>${james.protocols.groupId}</groupId>
+            <artifactId>protocols-imap</artifactId>
+            <version>${james.baseVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>6.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webflux</artifactId>
+            <version>6.0.12</version>
+        </dependency>
+    </dependencies>
+
+</project>
